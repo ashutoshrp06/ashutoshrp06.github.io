@@ -745,7 +745,7 @@
         /* Interests Section */
         .interests-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 1.5rem;
         }
 
@@ -969,7 +969,7 @@
             }
 
             .interests-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -1248,7 +1248,7 @@
                     <div class="timeline-company">Juniper Networks</div>
                     <div class="timeline-description">
                         <ul>
-                            <li>Designed and authored 20+ new YANG data models, enabling 10 new hardware platforms. Scalability improved significantly.</li>
+                            <li>Designed and authored 20+ new YANG data models, enabling 20+ new hardware platforms. Scalability improved significantly.</li>
                             <li>Built a Python automation script for version control analysis on YANG models. Reduced manual audit time by 95%. That is not a typo.</li>
                         </ul>
                     </div>
@@ -1307,6 +1307,30 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/ashutoshrp06/samantha" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distributed Sparse Matrix Engine -->
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <span class="project-badge">Distributed Systems</span>
+                        <h3 class="project-title">Distributed Sparse Matrix Engine</h3>
+                        <p class="project-description">
+                            A high-performance distributed sparse matrix multiplication engine built on Apache Spark and Scala. Because apparently multiplying matrices the normal way was too easy. Implements COO, CSR, and CSC formats with smart format detection that automatically picks the optimal representation. Achieved 2-10x speedup compared to Spark's MLlib. Zero driver bottlenecks, fully distributed computation, no collect() calls anywhere. The kind of project where you spend three days debugging a partitioning strategy and then pretend it was obvious all along.
+                        </p>
+                        <div class="project-tech">
+                            <span>Scala</span>
+                            <span>Apache Spark</span>
+                            <span>Distributed Computing</span>
+                            <span>COO/CSR/CSC</span>
+                            <span>Tensor Ops</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rtsh13/dune" target="_blank" class="project-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                 View on GitHub
                             </a>
@@ -1482,6 +1506,11 @@
                     <div class="interest-title">Table Tennis</div>
                     <div class="interest-subtitle">Competitive club level. Faster than my compile times.</div>
                 </div>
+                <div class="interest-card">
+                    <div class="interest-icon">📸</div>
+                    <div class="interest-title">Photography</div>
+                    <div class="interest-subtitle">Phone camera for now. Gear acquisition syndrome loading.</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1508,7 +1537,7 @@
             </div>
             
             <div class="contact-form-container">
-                <form class="contact-form" action="https://formspree.io/f/xpqzyoav" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
