@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -39,7 +39,7 @@
         }
 
         body {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.7;
@@ -107,9 +107,9 @@
         }
 
         .logo {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Inter', sans-serif;
             font-size: 1.5rem;
-            font-weight: 400;
+            font-weight: 700;
             color: var(--text-primary);
             letter-spacing: -0.02em;
         }
@@ -173,9 +173,9 @@
         }
 
         .hero-content h1 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Inter', sans-serif;
             font-size: clamp(3rem, 6vw, 4.5rem);
-            font-weight: 400;
+            font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
@@ -183,7 +183,6 @@
 
         .hero-content h1 .accent {
             color: var(--accent-light);
-            font-style: italic;
         }
 
         .hero-tagline {
@@ -207,7 +206,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--accent-light);
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
         }
 
         .stat-label {
@@ -298,14 +297,14 @@
 
         .code-title {
             margin-left: auto;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 0.75rem;
             color: var(--text-muted);
         }
 
         .code-body {
             padding: 1.5rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 0.85rem;
             line-height: 1.8;
         }
@@ -339,7 +338,7 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 0.75rem 1rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 0.75rem;
             color: var(--text-secondary);
             animation: float 6s ease-in-out infinite;
@@ -375,7 +374,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 0.8rem;
             color: var(--accent);
             text-transform: uppercase;
@@ -391,9 +390,9 @@
         }
 
         .section-title {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Inter', sans-serif;
             font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
+            font-weight: 700;
             letter-spacing: -0.02em;
             line-height: 1.2;
         }
@@ -416,12 +415,13 @@
         }
 
         .about-text p:first-of-type::first-letter {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Inter', sans-serif;
             font-size: 3.5rem;
             float: left;
             line-height: 1;
             margin-right: 0.5rem;
             color: var(--accent-light);
+            font-weight: 700;
         }
 
         .about-highlights {
@@ -550,7 +550,7 @@
         }
 
         .timeline-date {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 0.8rem;
             color: var(--accent);
             margin-bottom: 0.5rem;
@@ -674,7 +674,7 @@
             border: 1px solid var(--border);
             border-radius: 4px;
             font-size: 0.8rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             color: var(--text-muted);
         }
 
@@ -828,7 +828,7 @@
         }
 
         .contact-email {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 1.5rem;
             color: var(--accent-light);
             margin-top: 1rem;
@@ -875,7 +875,7 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             color: var(--text-primary);
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 0.95rem;
             transition: all 0.3s ease;
         }
@@ -1269,7 +1269,7 @@
                 <!-- LOB Simulator -->
                 <div class="project-card featured">
                     <div class="project-content">
-                        <span class="project-badge">Featured</span>
+                        <span class="project-badge">Ongoing</span>
                         <h3 class="project-title">Limit Order Book Simulator</h3>
                         <p class="project-description">
                             A high-performance LOB simulator in modern C++17. Price-time priority matching, O(1) order cancellation, and integer arithmetic because floating point errors in trading systems are how you accidentally buy a small country. Cache-friendly data structures that would make an HFT firm nod approvingly.
@@ -1289,7 +1289,86 @@
                     </div>
                 </div>
 
-                <!-- Featured Project 1 -->
+                <!-- Friday + DocLM -->
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <span class="project-badge">Featured</span>
+                        <h3 class="project-title">Friday + DocLM</h3>
+                        <p class="project-description">
+                            A production-grade CLI tool for network engineers who debug infrastructure, not dashboards. Combines DocLM (a fine-tuned Qwen2.5-Coder-3B with LoRA adapter) with a fully local RAG pipeline and an atomic transaction engine. Diagnoses gRPC failures, TCP tuning issues, and kernel parameters. Four validation gates prevent hallucinations. Every destructive operation gets a dry-run, user confirmation, and automatic LIFO rollback on failure. All inference runs locally. Not one byte leaves your infrastructure. The kind of tool I wish existed when I was debugging telemetry systems at 2am.
+                        </p>
+                        <div class="project-tech">
+                            <span>Go</span>
+                            <span>vLLM</span>
+                            <span>LoRA</span>
+                            <span>RAG</span>
+                            <span>Qdrant</span>
+                            <span>ONNX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rtsh13/friday" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                GitHub
+                            </a>
+                            <a href="https://tgifriday.vercel.app/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                Dashboard
+                            </a>
+                            <a href="https://huggingface.co/ashutoshrp06/DocLM" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                                DocLM on HuggingFace
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MSc Dissertation -->
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <span class="project-badge">MSc Dissertation</span>
+                        <h3 class="project-title">Automating Benchmark Construction in Finance</h3>
+                        <p class="project-description">
+                            LLM benchmarks have a shelf life shorter than milk. They saturate, get contaminated, and rarely fit your actual use case. Building new ones is expensive. My dissertation explores automated dynamic benchmarking using multi-agent LLM systems to generate meaningful evaluation data on the fly. Working with Aveni on real financial services problems: information extraction, summarization, and classification across call transcripts and documents. The goal is benchmarks that evolve without human babysitting and actually measure what matters. Supervised by Alexandra Birch-Mayne at Edinburgh and Barry Haddow at Aveni.
+                        </p>
+                        <div class="project-tech">
+                            <span>LLM Evaluation</span>
+                            <span>Multi-Agent Systems</span>
+                            <span>NLP</span>
+                            <span>Financial Domain</span>
+                            <span>Benchmark Design</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link" style="color: var(--text-muted); cursor: default;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                In Progress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feed Parser -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">NASDAQ ITCH Feed Parser</h3>
+                        <p class="project-description">
+                            Binary market data feed parser for NASDAQ ITCH 5.0 protocol. Zero-copy parsing with reinterpret_cast, big-endian to little-endian byte swapping, and pragma pack structs matching wire format exactly. Integrates with the LOB Simulator to reconstruct live order books from exchange messages. The glamorous work that happens before your trading algorithm even sees a price.
+                        </p>
+                        <div class="project-tech">
+                            <span>C++17</span>
+                            <span>Binary Parsing</span>
+                            <span>ITCH 5.0</span>
+                            <span>CMake</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ashutoshrp06/feed-parser" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Strategy Algorithmic Trading System -->
                 <div class="project-card featured">
                     <div class="project-content">
                         <span class="project-badge">Featured</span>
@@ -1313,7 +1392,7 @@
                     </div>
                 </div>
 
-                <!-- Featured Project 2 -->
+                <!-- Samantha: CLI Assistant -->
                 <div class="project-card featured">
                     <div class="project-content">
                         <span class="project-badge">OpenEuler Finalist</span>
