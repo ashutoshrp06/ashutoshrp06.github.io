@@ -1341,21 +1341,33 @@
                 <!-- LOB Simulator -->
                 <div class="project-card featured">
                     <div class="project-content">
-                        <span class="project-badge">Ongoing</span>
-                        <h3 class="project-title">Limit Order Book Simulator</h3>
+                        <span class="project-badge">C++ Systems</span>
+                        <h3 class="project-title">Limit Order Book Simulator + Optimized Rewrite</h3>
                         <p class="project-description">
-                            A high-performance LOB simulator in modern C++17. Price-time priority matching, O(1) order cancellation, and integer arithmetic because floating point errors in trading systems are how you accidentally buy a small country. Cache-friendly data structures that would make an HFT firm nod approvingly. Currently optimizing memory layout and adding SIMD where it makes sense and showing off where it does not.
+                            Started with lob-simulator, a full LOB in C++17. Price-time priority matching, O(1) order cancellation via iterator storage, IOC and FOK order types, execution report callbacks, Google Test suite. Correct, well tested, and slow by HFT standards. Exactly what you write before you understand why speed matters.
+                        </p>
+                        <p class="project-description">
+                            Then I rewrote it properly. lob-simulator-optimized replaces std::map with a direct-indexed array (O(1) price level access, no tree traversal), heap allocation with a pre-allocated memory pool, and adds a lock-free SPSC queue for the feed handler to matching engine pipeline. Intrusive linked lists keep FIFO order within price levels without any separate allocation.
+                        </p>
+                        <p class="project-description">
+                            Results on 1M orders, MacBook Air M4, -O3: Add order 1843ns to 32.9ns (56x). Cancel 633ns to 22ns (29x). SPSC vs mutex queue 6.4ns vs 22.1ns per message. Spent more time debugging a corrupted memory pool than I'd like to admit. Turns out uint64_t and negative numbers have opinions about each other.
                         </p>
                         <div class="project-tech">
                             <span>C++17</span>
+                            <span>Memory Pool</span>
+                            <span>Lock-free SPSC</span>
                             <span>HFT</span>
-                            <span>Order Matching</span>
                             <span>CMake</span>
+                            <span>Google Test</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/ashutoshrp06/lob-simulator" target="_blank" class="project-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                GitHub
+                                Original
+                            </a>
+                            <a href="https://github.com/ashutoshrp06/lob-simulator-optimized" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                Optimized
                             </a>
                         </div>
                     </div>
